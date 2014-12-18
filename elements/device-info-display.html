@@ -1,0 +1,73 @@
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../bower_components/paper-shadow/paper-shadow.html">
+<link rel="import" href="../bower_components/paper-slider/paper-slider.html">
+<link rel="import" href="../bower_components/paper-spinner/paper-spinner.html">
+<link rel="import" href="../lib/device-info-service.html">
+
+<polymer-element name="device-info-display" attributes="device" block>
+<template>
+<style>
+  :host {
+    font-size: 14px;
+  }
+  paper-shadow {
+    margin: 8px;
+    padding: 16px;
+    border-radius: 2px;
+    position: relative;
+  }
+  paper-icon-button {
+    position: absolute; top: 0; right: 0;
+  }
+  hgroup {
+    margin-bottom: 16px;
+  }
+  h1 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 24px;
+  }
+  h2 {
+    margin: 0;
+    font-weight: normal;
+    font-size: 16px;
+    color: #727272;
+  }
+  dl {
+    margin: 0;
+  }
+</style>
+<section>
+  <paper-shadow layout horizontal>
+    <div layout vertical>
+      <hgroup layout vertical center-justified>
+        <h1>{{device.name}}</h1>
+        <h2>{{device.address}}</h2>
+      </hgroup>
+      <dl>
+        <dt>Manufactured by</dt><dd>{{service.manufacturerName}}</dd>
+        <dt>Model Number</dt><dd>{{service.modelNumber}}</dd>
+        <dt>Serial Number</dt><dd>{{service.serialNumber}}</dd>
+        <dt>Hardware Revision</dt><dd>{{service.hardwareRevision}}</dd>
+        <dt>Firmware Revision</dt><dd>{{service.firmwareRevision}}</dd>
+        <dt>System ID</dt>
+        <dd><dl>
+          <dt title="Unique ID for the manufacturer, assigned by the IEEE Registration Authority">Organizationally Unique Identifier</dt><dd>{{service.systemId.organizationallyUniqueIdentifier}}</dd>
+          <dt title="Assigned by the manufacturer">Manufacturer Identifier</dt><dd>{{service.systemId.manufacturerIdentifier}}</dd>
+        </dl></dd>
+        <dt>PnP ID</dt>
+        <dd><dl>
+          <dt>Vendor ID Source</dt><dd>{{service.pnpId.vendorIdSourceString}}</dd>
+          <dt>Vendor ID</dt><dd>{{service.pnpId.vendorId}}</dd>
+          <dt>Product ID</dt><dd>{{service.pnpId.productId}}</dd>
+          <dt>Product Version</dt><dd>{{service.pnpId.productVersion}}</dd>
+        </dl></dd>
+    </div>
+    <paper-icon-button icon="close" title="Close" on-click="{{close}}" self-start></paper-icon-button>
+  </paper-shadow>
+</section>
+</template>
+
+<script src="device-info-display.js"></script>
+</polymer-element>
