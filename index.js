@@ -1,4 +1,4 @@
-addEventListener('DOMContentLoaded', function() {
+HTMLImports.whenReady(function() {
 'use strict';
 
 var model = document.querySelector('#model');
