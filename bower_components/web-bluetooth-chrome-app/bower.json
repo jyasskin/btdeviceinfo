@@ -1,0 +1,29 @@
+{
+  "name": "web-bluetooth-chrome-app",
+  "description": "A polyfill for the Web Bluetooth API on top of the Chrome Apps Bluetooth APIs.",
+  "main": [ "bluetooth.html", "bluetooth.js" ],
+  "moduleType": [
+    "globals"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#>=0.5.0",
+    "paper-elements": "Polymer/paper-elements#>=0.5.0"
+  },
+  "keywords": [
+    "bluetooth",
+    "polyfill"
+  ],
+  "license": "Apache 2",
+  "homepage": "https://github.com/WebBluetoothCG/chrome-app-polyfill",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WebBluetoothCG/chrome-app-polyfill.git"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
