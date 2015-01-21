@@ -29,11 +29,11 @@
     "test",
     "tests"
   ],
-  "_release": "f62f576a8a",
+  "_release": "2817c15b9f",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "f62f576a8ad4b52dafe8d398565bbb4da0203609"
+    "commit": "2817c15b9f677cc64c2b460d1121cfa51e0b9b30"
   },
   "_source": "git://github.com/WebBluetoothCG/chrome-app-polyfill.git",
   "_target": "master",
