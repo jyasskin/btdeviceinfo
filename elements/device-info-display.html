@@ -58,11 +58,15 @@
         </dl></dd>
         <dt>PnP ID</dt>
         <dd><dl>
-          <dt>Vendor ID Source</dt><dd>{{service.pnpId.vendorIdSourceString}}</dd>
-          <dt>Vendor ID</dt><dd>{{service.pnpId.vendorId}}</dd>
-          <dt>Product ID</dt><dd>{{service.pnpId.productId}}</dd>
-          <dt>Product Version</dt><dd>{{service.pnpId.productVersion}}</dd>
+          <dt>Vendor ID Source</dt><dd>{{service.pnpId.vendorIdSourceString || device.vendorIdSource}}</dd>
+          <dt>Vendor ID</dt><dd>{{service.pnpId.vendorId || device.vendorId}}</dd>
+          <dt>Product ID</dt><dd>{{service.pnpId.productId || device.productId}}</dd>
+          <dt>Product Version</dt><dd>{{service.pnpId.productVersion || device.productVersion}}</dd>
         </dl></dd>
+        <dt>UUIDs</dt>
+        <template repeat="{{device.uuids}}">
+          <dd>{{}}</dd>
+        </template>
     </div>
     <paper-icon-button icon="close" title="Close" on-click="{{close}}" self-start></paper-icon-button>
   </paper-shadow>
